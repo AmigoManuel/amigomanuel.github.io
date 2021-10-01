@@ -39,35 +39,39 @@ const camLocs = {
 // Contenido html
 const bodyContents = {
   content1: `<div class="center">
-        <h2>Hola humana/o!</h2>
+        <h2>Hola humana/o! 👋</h2>
         <p>Se te invita cordialmente a la celebración de mi cumple este día 31 de Octubre</p>
       </div>`,
   content2: `<div class="center">
-        <h1>Será el evento del año</h1>
+        <h1>Será el evento del año 🎊🎊🎊</h1>
       </div>`,
   content3: `<div class="center">
-  <p>Y debes asistir debidamente disfrazada/o (a libre elección, no necesariamente de terror)</p>
+  <p>Y debes asistir debidamente disfrazada/o 👨‍🚀🦸‍♀️ 🧙‍♂️🧛 🤰👩‍⚕️ (a libre elección, no necesariamente de terror)</p>
   </div>`,
   content4: `<div class="center">
-  <p>recuerda traer tu pase de movilidad debidamente habilitado y cumplir con los protocolos establecidos por las autoridades</p>
+  <p>recuerda traer tu pase de movilidad debidamente habilitado y cumplir con los protocolos establecidos por las autoridades 😷</p>
       </div>`,
   content5: `<div class="center">
-  <p>La celebración será en la casita de Hualpen</p>
+  <p>La celebración será en la casita de Hualpen 🏡</p>
       </div>`,
   content6: `<div class="center">
-        <h2>Y recuerda mostrar respeto ante las bendiciones!</h2>
+        <h2>Y recuerda mostrar respeto ante las bendiciones! 🐈🐈</h2>
         <p>pintas y tin</p>
       </div>`,
   content7: `<div class="center">
         <h2>Habrá pastel!</h2>
-        <p>juegos, silla musical, pirotecnia y mucho más :D</p>
+        <p>juegos, silla musical, pirotecnia, fornai, frifai y mucho más </p>
       </div>`,
   content8: `<div class="center">
-        <h2>Creado con ThreeJS sobre ViteJS!</h2>
+        <h2>No faltes 😎</h2>
+        <br>
+        <br>
+        <h2>Creado con ThreeJS sobre Vite!</h2>
         <h2>Modelos de <a href="sketchfab.com">sketchfab.com</a></h2>
+        <h2>Repositorio <a href="https://github.com/AmigoManuel/NelSpookyParty">NelSpookyParty</a></h2>
       </div>`,
   content9: `<div class="center">
-        <h2>Invitación al cumple de NEL</h2>
+        <h2>Invitación al cumple de NEL 🎃🎈</h2>
         <p></p>
       </div>`,
 };

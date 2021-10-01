@@ -1,5 +1,6 @@
 import { loadModel, tweenCamera } from "./Utils";
 import { NPCParams, camLocs, bodyContents } from "./Constants";
+import * as Three from "three";
 
 const path = "./models";
 const npcs = [];
@@ -16,7 +17,7 @@ const loadNPCS = (scene) => {
 };
 
 // Saltos de camara según click
-const counter = (camera, iteration) => {
+const clickCounter = (camera, iteration) => {
   switch (iteration) {
     case 2:
       tweenCamera(camera, camLocs.camLoc1.cords, camLocs.camLoc1.rots, bodyContents.content1);
@@ -48,4 +49,32 @@ const counter = (camera, iteration) => {
   }
 };
 
-export { loadNPCS, counter };
+const cameraProcedure = (camera) => {
+  // Audio
+  const audioLoader = new Three.AudioLoader();
+  const listener = new Three.AudioListener();
+  const audio = new Three.Audio(listener);
+  // Desplazamiento inicial
+  let iteration = 1;
+  clickCounter(camera, iteration);
+  // Luego del primer click inicia el audio
+  let firstTime = 1;
+  // Listener de clicks
+  document.onmousedown = () => {
+    if (iteration == 9) iteration = 0;
+    iteration += 1;
+    clickCounter(camera, iteration);
+    if ((iteration == 2, firstTime)) {
+      audio.crossOrigin = "anonymous";
+      // da play al audio
+      audioLoader.load("./sounds/gruntilda.ogg", function (buffer) {
+        audio.setBuffer(buffer);
+        audio.setLoop(true);
+        audio.play();
+      });
+      firstTime = 0;
+    }
+  };
+};
+
+export { loadNPCS, clickCounter, cameraProcedure };
